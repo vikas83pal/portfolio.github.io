@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Vikas - Developer</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               background-color: rgb(0, 0, 33);
+               color: white;
+               font-family: 'Poppins', sans-serif;
+          }
+
+          nav {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               height: 80px;
+               background-color: rgb(18, 18, 62);
+
+          }
+
+          nav ul {
+               display: flex;
+               justify-content: center;
+
+          }
+
+          nav ul li {
+               list-style: none;
+               margin: 0 24px;
+          }
+
+          nav ul li a {
+               text-decoration: none;
+               color: white;
+          }
+
+          nav ul li a:hover {
+
+               color: rgb(162, 155, 224);
+               font-size: 1.01rem;
+          }
+
+          main hr {
+               border: 0;
+               background: #9c97f1;
+               height: 1.2px;
+               margin: 60px 84px;
+          }
+
+          .left {
+               font-size: 1.5rem;
+          }
+
+          .firstSection {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               margin: 130px 0;
+
+          }
+
+          .firstSection>div {
+               width: 30%;
+          }
+
+          .leftsection {
+               font-size: 2rem;
+               margin: 70px 0;
+
+          }
+
+          .rigtSection img {
+
+               width: 80%;
+
+          }
+
+          .purple {
+               color: rgb(170, 91, 244);
+          }
+
+          .text-gray {
+               color: gray;
+          }
+
+          #element {
+               color: rgb(170, 91, 244);
+          }
+
+          .secondSection {
+               max-width: 80vw;
+               margin: auto;
+               height: 80vh;
+          }
+
+          .secondSection h1 {
+               font-size: 1.9rem;
+          }
+
+          .secondSection .box {
+               background: white;
+               width: 80vw;
+               height: 2px;
+               margin: 56px 0;
+               display: flex;
+          }
+
+          .secondSection .vertical {
+               height: 93px;
+               width: 1px;
+               background-color: white;
+               margin: 0 100px;
+          }
+
+          .image-top {
+               width: 23px;
+               position: relative;
+               top: -32px;
+               left: -9px;
+          }
+
+          .vertical-title {
+               position: relative;
+               top: 75px;
+               width: 150px;
+
+          }
+
+          .vertical-desc {
+               position: relative;
+               top: 86px;
+               color: gray;
+               width: 150px;
+               font-size: 9px;
+          }
+
+          footer {
+               background-color: rgb(18, 18, 62);
+               height: 232px;
+          }
+
+          .footer {
+               display: flex;
+               padding: 23px 122px;
+               justify-content: space-evenly;
+          }
+
+
+
+          #services {
+               margin: 34px;
+               display: flex;
+
+          }
+
+          #services .box {
+               border: 2px solid brown;
+               padding: 34px;
+               margin: 2px 55px;
+               border-radius: 28px;
+               background: rgb(18, 18, 62);
+               margin-bottom: 20px;
+          }
+
+          #services .box img {
+               height: 160px;
+               margin: auto;
+               display: block;
+          }
+
+          #services .box p {
+               font-family: 'Bree Serif', serif;
+
+          }
+
+          /* Clients Section */
+          #client-section {
+               position: relative;
+          }
+
+          #client-section::before {
+               content: "";
+               position: absolute;
+               background: url('../bg.jpg');
+               width: 100%;
+               height: 100%;
+               z-index: -1;
+               opacity: 0.3;
+          }
+
+          #clients {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .client-item {
+               padding: 34px;
+          }
+
+          #clients img {
+               height: 124px;
+          }
+
+
+          #contact {
+               position: relative;
+          }
+
+          #contact::before {
+               content: "";
+               position: absolute;
+               width: 100%;
+               height: 100%;
+               z-index: -1;
+               opacity: 0.7;
+               background: url('../contact.jpg') no-repeat center center/cover;
+
+          }
+
+          #contact-box {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding-bottom: 34px;
+          }
+
+          #contact-box input,
+          #contact-box textarea {
+               width: 100%;
+               padding: 0.5rem;
+               border-radius: 9px;
+               font-size: 1.1rem;
+          }
+
+          #contact-box form {
+               width: 40%;
+          }
+
+          #contact-box label {
+               font-size: 1.3rem;
+               font-family: 'Bree Serif', serif;
+
+          }
+
+          /* Utility Classes */
+          .h-primary {
+               font-family: 'Bree Serif', serif;
+               font-size: 3.8rem;
+               padding: 12px;
+          }
+
+          .h-secondary {
+               font-family: 'Bree Serif', serif;
+               font-size: 2.3rem;
+               padding: 12px;
+          }
+
+          .btn {
+               padding: 6px 20px;
+               border: 2px solid white;
+               background-color: blue;
+               color: white;
+               margin: 17px;
+               font-size: 1.5rem;
+               border-radius: 10px;
+               cursor: pointer;
+          }
+
+          .blue-text {
+               color: blue;
+          }
+
+
+          .center {
+               text-align: center;
+          }
+
+          .new {
+               display: block;
+          }
+
+     </style>
+</head>
+
+<body>
+     <header>
+          <nav>
+               <div class="left"> Vikas - Developer</div>
+               <div class="right">
+                    <ul>
+                         <li><a href="/">Home</a></li>
+                         <li><a href="/">About</a></li>
+                         <li><a href="/">Services</a></li>
+                         <li><a href="/">Projects</a></li>
+                         <li><a href="/">Achievements</a></li>
+                         <li><a href="/">Contact Me</a></li>
+                    </ul>
+               </div>
+
+          </nav>
+     </header>
+     <main>
+          <section class="firstSection">
+               <div class="leftsection">
+                    <h4>Welcome to <span class="purple">CodersBro</span> </h4>
+                    <div>
+                         Confused on which course to take? I have got you covered.</div>
+                    <div>Browse courses and find out the best course for you.</div>
+                    <span id="element"></span>
+
+               </div>
+               <div class="rigtSection">
+                    <img src="photo.-removebg-preview-modified.png" alt="">
+               </div>
+
+
+          </section>
+          <hr>
+          <section class="secondSection">
+               <span class="text-gray">I Have Done So Far</span>
+               <h1>Work Experience</h1>
+               <div class="box">
+                    <div class="vertical">
+                         <img class="image-top" src="photo.-removebg-preview.png" alt="">
+                         <div class="vertical-text">
+                              HTML Developer
+                         </div>
+                         <div class="vertical-desc">
+                              This is one of my favorite courses. In this series, you'll learn about HTML, CSS,
+                              JavaScript, and everything needed to be a job-ready web developer. Just hop on, man.
+                         </div>
+                    </div>
+                    <div class="vertical">
+                         <img class="image-top" src="photo.-removebg-preview.png" alt="">
+                         <div class="vertical-text">
+                              C Developer </div>
+                         <div class="vertical-desc">
+                              This series contains programs for you to practice C Programming and related concepts. It
+                              has videos that will provide you with a proper explanation of the program and its logic.
+                         </div>
+                    </div>
+                    <div class="vertical">
+                         <img class="image-top" src="photo.-removebg-preview.png" alt="">
+                         <div class="vertical-text">
+                              C++ Developer </div>
+                         <div class="vertical-desc">
+                              If you don't know about Object Oriented Programming (OOP) Paradigm, then this course is
+                              for you. In this you'll learn about objects, classes and much more in C++ language.
+                         </div>
+                    </div>
+                    <div class="vertical">
+                         <img class="image-top" src="photo.-removebg-preview.png" alt="">
+                         <div class="vertical-text">
+                              Sql Developer </div>
+                         <div class="vertical-desc">
+                              This is one of the most-watched courses on this channel. If you want to create projects as
+                              early as possible, then this course is for you. You'll get dozen of projects in this
+                              course.
+
+
+                         </div>
+                    </div>
+                    <div class="vertical">
+                         <img class="image-top" src="photo.-removebg-preview.png" alt="">
+                         <div class="vertical-text">
+                              Java Developer </div>
+                         <div class="vertical-desc">
+                              If you don't know programming and want to start your career by learning Java as your first
+                              language, you can start with this course as it is for absolute beginners.
+                         </div>
+                    </div>
+                    <div class="vertical">
+                         <img class="image-top" src="photo.-removebg-preview.png" alt="">
+                         <div class="vertical-text">
+                              Python Developer </div>
+                         <div class="vertical-desc">
+                              Python is one of the most demanded programming languages in the job market. Surprisingly,
+                              it is equally easy to learn and master Python. Let's commit our 100 days of code to
+                              python!
+                         </div>
+                    </div>
+
+
+               </div>
+          </section>
+          <hr>
+          <section id="services-container">
+
+               <center>
+                    <h3 class="h-primary">Testimonials</h3>
+               </center>
+
+               <div id="services">
+
+                    <br>
+                    <div class="box">
+
+
+                         <p>I don't have words to thank this man, I'm really grateful to have this channel and website
+                              in my daily routine. If you're a mere beginner, then you can trust this guy and can put
+                              your time into his content. I can assure you that it'll be worth it. </p>
+                         <br><br>
+                         <h6>
+                              Rakesh Shetty<br>
+                              Web Developer</h6>
+                    </div>
+
+                    <div class="box">
+
+
+                         <p>For everyone who wants to level up their #Coding and #Dev skills - seriously, this channel
+                              is for you! Both basic and advanced stacks are covered on this channel, and one can learn
+                              according to his skill levels. And the icing on the cake is, everything is available for
+                              free.
+                         </p>
+                         <br><br>
+                         <h6>
+                              Rakesh Shetty<br>
+                              Web Developer</h6>
+                    </div>
+               </div>
+          </section>
+          <hr>
+          <section id="services-container">
+               <br>
+               <h1 class="h-primary center"> <span class="blue-text">Recommended Courses</span></h1>
+              
+               <div id="services">
+                   <div class="box">
+                       <img src="download.png" alt="">
+                       <h2 class="h-secondary center">Tableau Tutorial</h2>
+                       <p class="center"><a href="Tableau_material_for_reference.pdf">Start Learning!</a></p>
+                   </div>
+                  <!-- <div class="box">
+                       <img src="html.jpg" alt="">
+                       <h2 class="h-secondary center">Html Tutorial</h2>
+                       <p class="center"><a href="HTML_Complete_Notes.pdf">Start Learning!</a></p>
+                   </div>
+                   <div class="box">
+                       <img src="java.jpg" alt="">
+                       <h2 class="h-secondary center">Java Tutorial</h2>
+                       <p class="center"><a href="java-notes.pdf">Start Learning!</a></p>
+                   </div>
+                  <div class="box">
+                       <img src="machine-learning-logo.png" alt="">
+                       <h2 class="h-secondary center">ML Tutorial</h2>
+                       <p class="center"><a href="https://www.javatpoint.com/machine-learning">Start Learning!</a></p>
+                   </div> -->
+                   
+                   <div class="box new">
+                       
+                       <img src="dsa.jpg" alt="">
+                       <h2 class="h-secondary center">DSA Tutorial</h2>
+                       <p class="center"><a href="DSA_CompleteNotes.pdf">Start Learning!</a></p>
+                   
+                   </div>
+               </div>
+           </section>
+           <hr>
+          <section id="contact">
+
+               <h3 class="h-primary center">Contact Us</h3>
+               <div id="contact-box">
+                    <form action="">
+                         <div class="form-group">
+                              <label for="name">Name: </label>
+                              <input type="text" name="name" id="name" placeholder="Enter your name">
+                         </div>
+                         <div class="form-group">
+                              <label for="email">Email: </label>
+                              <input type="email" name="name" id="email" placeholder="Enter your email">
+                         </div>
+                         <div class="form-group">
+                              <label for="phone">Phone Number: </label>
+                              <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                         </div>
+                         <div class="form-group">
+                              <label for="message">Message: </label>
+                              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                              <button class="btn">
+                                   <center>Submit</center>
+                              </button>
+                         </div>
+
+                    </form>
+               </div>
+          </section>
+     </main>
+     
+          <footer>
+               <center>
+                    <div>
+                         Copyright @ www.Vikas-Developer All rights reserved.
+                    </div>
+               </center>
+
+              
+
+          </footer>
+     
+
+     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <script>
+          var typed = new Typed('#element', {
+               strings: ['Web Developer', 'Android Developer', 'Java Developer', 'Web Developer', 'Android Developer', 'Java Developer', 'C Developer', 'C++ Developer'],
+               typeSpeed: 50,
+          });
+     </script>
+</body>
+
+</html>
